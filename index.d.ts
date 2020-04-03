@@ -1,3 +1,3 @@
 declare module 'rn-openapp' {
-    export const openApp = (packageId: string) => Promise<boolean>
+    export const openApp = (packageId: string) => new Promise<boolean>
 }
