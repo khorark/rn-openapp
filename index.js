@@ -11,6 +11,5 @@ export const openApp = packageId => {
     return true;
   } catch (e) {
     throw new Error(e);
-    return false;
   }
 };
