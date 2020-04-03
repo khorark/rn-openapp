@@ -1,5 +1,13 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from "react-native";
 
 const { Openapp } = NativeModules;
 
-export default Openapp;
+export const openApp = packageId => {
+  try {
+    Openapp.openApp(packageId);
+    return true;
+  } catch (e) {
+    throw new Error(e);
+    return false;
+  }
+};
