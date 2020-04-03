@@ -13,7 +13,9 @@
 ```javascript
 import { openApp } from "rn-openapp";
 
-openApp()
+const examplePackageId = "com.example.packageid";
+
+openApp(examplePackageId)
   .then(result => cosnole.log(result))
   .catch(e => console.warn(e));
 ```
