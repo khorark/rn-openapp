@@ -13,7 +13,7 @@
 ```javascript
 import { openApp } from "rn-openapp";
 
-loginWithApple()
-  .openApp(result => cosnole.log(result))
+openApp()
+  .then(result => cosnole.log(result))
   .catch(e => console.warn(e));
 ```
