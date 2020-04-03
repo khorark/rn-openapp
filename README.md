@@ -15,7 +15,7 @@ This package help you openned other user app on android phone. You only need kno
 
 ## Usage
 
-:exclamation: **IMPORTANT** :exclamation: Open app work only Android platform :exclamation: 
+:exclamation: **IMPORTANT** :exclamation: You can open app only Android platform :exclamation: 
 
 ```javascript
 import { openApp } from "rn-openapp";
