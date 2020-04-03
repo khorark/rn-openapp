@@ -9,9 +9,11 @@
 `$ react-native link rn-openapp`
 
 ## Usage
-```javascript
-import Openapp from 'rn-openapp';
 
-// TODO: What to do with the module?
-Openapp;
+```javascript
+import { openApp } from "rn-openapp";
+
+loginWithApple()
+  .openApp(result => cosnole.log(result))
+  .catch(e => console.warn(e));
 ```
