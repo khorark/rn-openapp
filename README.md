@@ -1,6 +1,11 @@
 # rn-openapp
 
-## Getting started
+## Motivation
+<p align="center" style="font-size:20px;">
+This package help you openned other user app on android phone. You only need know package id. 
+</p>
+
+## Installation
 
 `$ npm install rn-openapp --save`
 
@@ -9,6 +14,8 @@
 `$ react-native link rn-openapp`
 
 ## Usage
+
+:exclamation: **IMPORTANT** :exclamation: Open app work only Android platform :exclamation: 
 
 ```javascript
 import { openApp } from "rn-openapp";
@@ -19,3 +26,5 @@ openApp(examplePackageId)
   .then(result => cosnole.log(result))
   .catch(e => console.warn(e));
 ```
+
+## Licence MIT.
