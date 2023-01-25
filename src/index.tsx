@@ -17,6 +17,14 @@ const RnOpenapp = NativeModules.RnOpenapp
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return RnOpenapp.multiply(a, b);
-}
+export const openApp = async (packageId: string): Promise<void> => {
+  if (!packageId || typeof packageId !== 'string')
+    throw new Error('Invalid package id');
+
+  try {
+    await RnOpenapp.openApp(packageId);
+  } catch (_e) {
+    const e = _e as string;
+    throw new Error(e);
+  }
+};
