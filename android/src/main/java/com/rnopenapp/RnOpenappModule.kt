@@ -1,5 +1,6 @@
 package com.rnopenapp
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
@@ -15,10 +16,10 @@ class RnOpenappModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun openApp(packageId: String, promise: Promise) {
-    val packageManager: PackageManager = getReactApplicationContext().getPackageManager()
+    val packageManager: PackageManager = reactApplicationContext.packageManager
     try {
-      val launchIntent: Intent = packageManager.getLaunchIntentForPackage(packageId)
-      getReactApplicationContext().startActivity(launchIntent)
+      val launchIntent: Intent? = packageManager.getLaunchIntentForPackage(packageId)
+      reactApplicationContext.startActivity(launchIntent)
       promise.resolve(true)
     } catch (e: Exception) {
       promise.reject(e.message, "Package not found")
